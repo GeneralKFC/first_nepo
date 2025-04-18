@@ -1,0 +1,1090 @@
+/* Header*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  background: #000;
+  align-items: center;
+  z-index: 100;
+  justify-content: space-around;
+}
+.text{
+  color:red;
+  font-size: 28px;
+}
+
+
+
+
+/*Counter*/
+.ooo{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+
+  align-items:center;
+  gap: 10px;
+}
+.ccc{
+  margin-top: 100px;
+}
+.but{
+  display: flex;
+  gap: 20px;
+}
+
+.Minus{
+  width: 100px;
+text-align: center;
+  border: 1px solid red;
+  border-radius: 20px;
+  padding: 10px;
+  background: green;
+  color: white;
+  cursor: pointer;
+}
+.plus{
+  width:100px;
+  text-align: center;
+  border: 1px solid red;
+  border-radius: 20px;
+  padding: 10px;
+  background: green;
+  color: white;
+  cursor: pointer;
+}
+.refresh{
+  width:100px;
+  text-align: center;
+  border: 1px solid red;
+  border-radius: 20px;
+  padding: 10px;
+  background: green;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+/*Calc*/
+.Calculator{
+  display: flex;
+  margin: 50px 0px 50px 0px;
+}
+.num{
+  display: grid;
+  grid-template-columns: repeat(3, 100px); /* 3 колонки по 100px */
+  grid-template-rows: repeat(3, 100px); /* 3 строки по 100px */
+  gap: 5px; /* Расстояние между ячейками */
+}
+.num1{
+  display: grid;
+  grid-template-columns: repeat(4, 75px); /* 3 колонки по 100px */
+  grid-template-rows: repeat(4,  100px); /* 3 строки по 100px */
+  gap: 3px; /* Расстояние между ячейками */
+}
+.qqq{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: red;
+}
+.qqq:active{
+  background: rgb(134, 14, 14);
+}
+.Abil{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.all{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  gap: 5px;
+  margin-top: 50px;
+  height: auto;
+
+}
+.www{
+  display: flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  background: red;
+  cursor: pointer;
+}
+.www:active{
+  background: rgb(134, 14, 14);
+}
+.answer{
+  display: flex;
+  width: 415px;
+  height: 100px;
+  border: 3px solid red;
+  align-items: center;
+  background: #575555;
+}
+.numab{
+  display: flex;
+  gap: 5px;
+  height: 500px
+}
+.Yournum{
+  display: flex;
+  font-size: 60px;
+  color:red;
+  width: 370px;
+  height: 110px;
+  max-width: 400px;
+  max-height: 130px;
+  font-size: 40px;
+}
+
+
+
+/*Weather*/
+.Cont{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: auto;
+
+}
+.weather_block{
+  border-radius: 5px;
+  display: flex;
+  margin: auto;
+  height: auto;
+  background: linear-gradient(0deg, purple,rgb(109, 0, 128),rgb(77, 0, 128),rgb(43, 0, 128));
+  padding: 50px 25px;
+  flex-direction: column;
+  width: 100%;
+  align-items:center;
+  gap: 40px;
+
+}
+.inp_search{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+input{
+  display: flex;
+  width: 300px;
+  outline: none;
+  padding: 5px;
+  height: 30px;
+  border:none;
+  border-radius:10px
+}
+.img{
+  display: flex;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  mix-blend-mode:multiply;
+
+
+}
+.img_searhc{
+  display: flex;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  mix-blend-mode:darken;
+  cursor: pointer;
+}
+.General_img{
+  width: 200px;
+  height: 200px;
+  display: block;
+  border-radius:50%;
+}
+.City{
+  font-size: 50px;
+  color: rgb(255, 255, 106);
+}
+.wind_wet{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+.wind{
+  display: flex;
+  align-items: center;
+  gap:20px;
+}
+.temperature{
+  font-size: 40px;
+  color:rgb(255, 255, 106);
+}
+
+
+
+
+
+
+/*puzzle*/
+.puzzle{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.bg{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 600px;
+  width: 600px;
+  margin: auto;
+
+}
+
+.p1p{
+  cursor: pointer;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  background: black;
+}
+.p2p{
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  background: red;
+}
+
+.p3p{ 
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  background: blue;
+}
+
+.p4p{
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  background: purple;
+}
+
+.p5p{
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  background: yellow;
+}
+
+.p6p{
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  background: green;
+}
+
+.p7p{
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  background: brown;
+}
+
+.p8p{
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  background: pink;
+}
+
+.p9p{
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  background: white;
+}
+.startpuzzle{
+  width: 150px;
+  display: flex;
+  margin: 50px auto;
+  height: 30px;
+  border:1px solid brown;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  color:white;
+  box-shadow: 1px 1px 1px black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.show{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  margin-top: 50px;
+
+}
+.p1p1{
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background: #000;
+}
+.p2p1{
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background: red;
+}
+
+.p3p1{
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background: blue;
+}
+
+.p4p1{
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background: purple;
+}
+
+.p5p1{
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background: yellow;
+}
+
+.p6p1{
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background: green;
+}
+
+.p7p1{
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background: brown;
+}
+
+.p8p1{
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background: pink;
+}
+
+.p9p1{
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background: white;
+}
+li{
+  list-style: none;
+}
+
+.qwerty{
+  display: flex;
+  flex-direction: column;
+}
+.bgshow{
+  display: flex;
+  margin-bottom: 50px;
+}
+.item2{
+  display: flex;
+}
+.Congratulations{
+  display: flex;
+  position: fixed;
+  width: 500px;
+  height: 300px;
+  top: calc(50% - 150px);
+  left:calc(50% - 150px);
+  border-radius:40px;
+  align-items:center;
+  justify-content: center;
+  background: green;
+  font-size: 50px;
+  color:yellow;
+
+}
+.Uncorrect{
+  display: flex;
+  position: fixed;
+  width: 500px;
+  height: 300px;
+  top: calc(50% - 150px);
+  left:calc(50% - 150px);
+  border-radius:40px;
+  align-items:center;
+  justify-content: center;
+  background: rgb(161, 16, 16);
+  font-size: 50px;
+  color:yellow;
+
+}
+.goStart{
+  display: flex;
+  position: fixed;
+  width: 500px;
+  height: 300px;
+  top: calc(50% - 150px);
+  left:calc(50% - 150px);
+  border-radius:40px;
+  align-items:center;
+  justify-content: center;
+  background: green;
+  font-size: 50px;
+  color:yellow;
+}
+.hide{
+  display: none;
+}
+
+
+
+
+/*BrainCalc*/
+.BrainCalc_container{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 600px;
+  margin: 50px auto;
+  background: green;
+  align-items:center;
+  gap: 30px;
+  padding: 20px;
+}
+.BrainCalc_h1{
+  font-size: 40px;
+  color:rgb(102, 171, 255);
+}
+.BrainCalc_show{
+  display: flex;
+
+  width: 100%;
+  height: 400px;
+  background: #cbcbcb;
+}
+.BrainCalc_speed{
+  display: flex;
+  background: #000;
+  width: 25%;
+  height: 20%;
+  align-items:center;
+  justify-content: center;
+  color:white;
+  font-size: 25px;
+}
+.BrainCalc_showNumbers{
+  display: flex;
+  width: calc(50%);
+  height: 100%;
+  align-items:center;
+  justify-content: center;
+  color:black;
+  font-size: 70px;
+}
+.BrainCalc_Buttons{
+  display: flex;
+  width: 70%;
+  height: auto;
+  margin: auto;
+  gap: 50px;
+  justify-content: space-around;
+}
+.BrainCalc_b1{
+  display: flex;
+  cursor: pointer;
+  background: grey;
+  width: 30%;
+  height: 40px;
+  border-radius:4px;
+  align-items:center;
+  justify-content: center;
+  font-size: 15px;
+}
+.BrainCalc_b1:hover{
+  background: rgb(177, 177, 177);
+}
+.BrainCalc_b2{
+  display: flex;
+  background: grey;
+  width: 40%;
+  height: 40px;
+  border-radius:4px;
+  cursor: pointer;
+  align-items:center;
+  justify-content: center;
+  font-size: 20px;
+}
+.BrainCalc_b2:hover{
+  background: rgb(177, 177, 177);
+}
+.BrainCalc_b3{
+  display: flex;
+  cursor: pointer;
+  background: grey;
+  width: 30%;
+  height: 40px;
+  border-radius:4px;
+  align-items:center;
+  justify-content: center;
+  font-size: 15px;
+}
+.BrainCalc_b3:hover{
+  background: rgb(177, 177, 177);
+}
+.BrainCalc_EnterNumber{
+  display: flex;
+  margin: auto;
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+  outline: none;
+  text-align: center;
+}
+.BrainCalc_showNumbers_active{
+  display: flex;
+  width: calc(50%);
+  height: 100%;
+  align-items:center;
+  justify-content: center;
+  color:black;
+  font-size: 70px;
+  display: none;
+}
+.BrainCalc_container2{
+  flex-direction: column;
+  width: 80%;
+  height: 600px;
+  margin: 50px auto;
+  background: green;
+  align-items:center;
+  justify-content: center;
+  color:white;
+  gap: 30px;
+  padding: 20px;
+  display: none;
+}
+
+/*useHook_container*/
+.Education_container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: white;
+  width: 100%;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+}
+.Education2_input{
+  background: #000;
+  color:white;
+  list-style-type: none;
+}
+.Header2_text{
+  background: #000;
+  color:white;
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+.Footer{
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100px;
+  color:white;
+  align-items:center;
+  justify-content: center;
+}
+
+
+
+/*NumChance*/
+.NumChance_container{
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background: #a3a317;
+  box-shadow:2px 10px 10px black;
+}
+.NumChance_Cube_container1{
+  display: flex;
+  width: 550px;
+  height: 300px;
+  background: blue;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  cursor: pointer;
+}
+.NumChance_Cube_container2{
+  display: flex;
+  width: 550px;
+  height: 300px;
+  background: blue;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  cursor: pointer;
+}
+.arr_num{
+  display: flex;
+  height: 200px;
+  width: calc(100% - 50px);
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  gap: 5px;
+  
+}
+.arr_nums{
+  width: 100px;
+  height: 100%;
+  display: flex;
+  background: rgb(245, 245, 42);
+  box-shadow:3px 4px 1px rgb(96, 96, 96);
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+
+  text-shadow: 4px 4px 4px rgb(80, 9, 9);
+}
+.NumChance_Cubes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius:4px;
+}
+.Circle_1{
+  display: flex;
+  background: #000;
+  border-radius:50%;
+  width: 20px;
+  height: 20px;
+}
+.Length2{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns:repeat(2, 20px);
+  gap: 5px;
+}
+.Length3{
+  display: flex;
+  flex-direction: column;
+  transform: rotate(45deg);
+}
+.Length4{
+  display: grid;
+  grid-template-columns:repeat(2, 20px);
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.Length5{
+  display: grid;
+  grid-template-columns:repeat(2, 20px);
+  gap: 5px;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.Length6{
+  display: grid;
+  grid-template-columns:repeat(2, 20px);
+  gap: 5px;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*graph*/
+.Graph{
+  display: flex;
+  width: auto;
+  height: auto;
+  background: #000;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.graph_container1_p{
+  display: flex;
+  color:white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.graph_container1{
+  display: flex;
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+.graph_container2{
+  display: flex;
+  width: 600px;
+  flex-direction: column;
+  height: 300px;
+  margin: auto;
+  display: flex;
+}
+.NumChance_Cube_zaglushka{
+  display: flex;
+  width: 550px;
+  height: 300px;
+  background: blue;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  cursor: pointer;
+}
+
+
+/*Create_Graph*/
+.Create_Graph_container{
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  width: 100%;
+  gap: 40px;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+.Create_Graph_text{
+  display: flex;
+  color:#a3a317;
+  font-size: 25px;
+
+}
+.Create_Graph_Graph{
+  display: flex;
+  width: 70%;
+  height: 70%;
+  background: rgb(64, 64, 119);
+  padding: 10px;
+}
+.Create_Graph_divinput{
+  display: flex;
+
+}
+.Create_Graph_input{
+  display: flex;
+  border: 4px solid rgb(217, 217, 73);
+  width: 300px;
+  height: 40px;
+
+}
+.Create_Graph_input:hover{
+  background: #a9a131 !important; 
+  border: 4px solid rgb(215, 215, 99) !important;
+}
+.Create_Graph_Error{
+  display: none;
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  margin: auto;
+  background: rgb(113, 23, 23);
+  align-items:center;
+  text-align: center;
+  justify-content: center;
+}
+.Create_Graph_line{
+  color:red;
+  background: red;
+}
+
+/*Snacke*/
+.Snacke_container{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  height: 900px;
+  margin-top: 100px;
+  background: #1f2a3c;
+}
+.Snacke_field{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 600px;
+  height: 720px;
+  margin: auto;
+}
+.Snacke_button{
+  display: flex;
+  width: 200px;
+  height: 50px;
+  background: #676666;
+  margin: auto;
+  cursor: pointer;
+  align-items:center;
+  justify-content: center;
+  color:#a9a131;
+  font-size: 25px;
+}
+.Snacke_button:active{
+  scale: 1.1;
+}
+.white_field{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  background:white;
+  border:1px solid black;
+}
+.SnackeBlack_field{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background:black;
+}
+.SnackeBlack_field::before{
+  content:"";
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  margin-top:10px;
+  border-radius:5px;
+  background: white;
+}
+.SnackeBlack_field::after{
+  content:"";
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  margin-top:30px;
+  border-radius:5px;
+  background: white;
+}
+.Snacke_lose{
+  display: none;
+  width:60%;
+  height: 60%;
+  position: absolute;
+  margin-top: 10%;
+  background: red;
+  align-items:center;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  left: 20%;
+}
+.catch_field{
+  width: 60px;
+  height: 60px;
+  display: flex;
+background: hsl(0, 0%, 0%);
+}
+
+/*Form*/
+.Form{
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-top: 100px;
+  position: relative;
+}
+.Form_button{
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:none;
+  margin-left: auto;
+  margin-top: 30px;
+  cursor: pointer;
+  background: rgb(228, 228, 228);
+}
+.Form_button:hover{
+  border:1px solid rgb(109, 109, 109);
+  background: grey;
+  color:white;
+}
+.Form_button:active{
+  border:1px solid rgb(73, 73, 73);
+  background: rgb(89, 89, 89);
+  color:white;
+}
+box-icon {
+  display: flex;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.Form_lock:host{
+display: flex;
+height: 30px;
+width: 30px;
+cursor: pointer;
+background: white;
+}
+.Form_circle{
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border-radius:50%;
+  background: rgb(0, 255, 0);
+  display: none;
+  transition: 1s linear;
+}
+.Form_circle::after{
+  content:"";
+  width: 5px;
+  height: 25px;
+  background: #000;
+  display: flex;
+  position:absolute;
+  transform: rotate(45deg);
+  margin-left: 25px;
+  background: rgb(44, 182, 44);
+  border-radius: 2px;
+}
+.Form_circle::before{
+  content:"";
+  width: 5px;
+  height: 15px;
+  background: #000;
+  display: flex;
+  position:absolute;
+  transform: rotate(-45deg);
+  margin-top: 8px;
+  margin-left: 14px;
+  background: rgb(44, 178, 44);
+  border-radius: 2px;
+}
+.Form_incorrect{
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border-radius:50%;
+  background: rgb(207, 39, 39);
+  align-items: center;
+  justify-content:center ;
+  display: none;
+}
+.Form_incorrect::before{
+  content:"";
+  width: 5px;
+  height: 38px;
+  background: #000;
+  display: flex;
+  position:absolute;
+  transform: rotate(-45deg);
+  background: rgb(255, 0, 0);
+  border-radius: 2px;
+}
+.Form_incorrect::after{
+  content:"";
+  width: 5px;
+  height: 38px;
+  background: #000;
+  display: flex;
+  position:absolute;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  background: rgb(255, 0, 0);
+}
+.container_inp_check{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.Form_has{
+  display: flex;
+  width: 100px;
+  height: 30px;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  bottom: 50px;
+  right: 0px;
+
+}
+.Form_has_user{
+  display: flex;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: rgb(196, 110, 110);
+}
+.Form_has_user_button{
+  display: flex;
+  background: green;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  right: 0px;
+  bottom:0px;
+
+}
