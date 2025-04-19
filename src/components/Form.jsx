@@ -11,13 +11,13 @@ function Form(){
     const [login,setLogin]=useState('');
     const [password,setPassword]=useState('');
     const [name,setName]=useState('');
-    const [isOKName,setisOkName]=useState(false);
-    const [isOKLogin,setisOkLogin]=useState(false);
-    const [isOKPassword,setisOkPassword]=useState(false);
+    const [isOKName,setisOkName]=useState(null);
+    const [isOKLogin,setisOkLogin]=useState(null);
+    const [isOKPassword,setisOkPassword]=useState(null);
     const [User,setUser]=useState(null);
     const [show,setShow]=useState(false);
     const [WasUser,setWasUser]=useState('');
-    const [RenameUser,setRenameUser]=useState(null);
+    const [RenameUser,setRenameUser]=useState(false);
     const userIS=useRef(null);
     const sukaBlyatXyina=useRef();
     const SaveProfile=()=>{
@@ -60,6 +60,7 @@ function Form(){
 
 const Rename=()=>{
     if (isOKLogin && isOKPassword && isOKName) {
+        
         console.log('Все поля валидны');
         const newUser = {
           name: name,
@@ -79,7 +80,7 @@ const Rename=()=>{
         setisOkPassword(false);
 
     
-      } else {
+      } else{
         console.log('Есть ошибки валидации');
         
         // Сбрасываем все ошибки
@@ -122,10 +123,8 @@ const Rename=()=>{
     useEffect(()=>{
         if(localStorage.getItem("Username/Login")){
             sukaBlyatXyina.current.style.display="none";
-            if(RenameUser!==null){
-               return;
-            }else{
-                setRenameUser(<div onClick={()=>Rename()} className="Form_has_user_button">Rename?</div>)
+            if(!RenameUser){
+                setRenameUser(true)
             }
             
         }
@@ -186,9 +185,12 @@ const Rename=()=>{
           }
 
     },[name,password,login]);
-    console.log(isOKPassword);
-    console.log(isOKLogin);
-    console.log(isOKName);
+    if(isOKPassword && isOKLogin && isOKName){
+        console.log(isOKPassword);
+        console.log(isOKLogin);
+        console.log(isOKName);
+    }
+
 
     return(
     <form className="Form">
@@ -212,7 +214,7 @@ const Rename=()=>{
         <div ref={Incorrect3} className="Form_incorrect"></div>
         </div>
         {WasUser}
-        {RenameUser}
+        {RenameUser && <div onClick={Rename} className="Form_has_user_button">Rename?</div>}
         <div ref={sukaBlyatXyina} className="Form_button" onClick={()=>SaveProfile()}>Try</div>  
     </form>
     )

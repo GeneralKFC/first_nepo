@@ -19,7 +19,18 @@ header{
   color:red;
   font-size: 28px;
 }
-
+.Header_NL{
+  display: flex;
+  width: auto;
+  align-items: center;
+  width: auto;
+  gap: 30px;
+}
+.Header_UserText{
+  display: flex;
+  color: white;
+  font-size: 25px;
+}
 
 
 
