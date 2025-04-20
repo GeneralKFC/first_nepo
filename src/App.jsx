@@ -22,6 +22,7 @@ import CreateGraph from "./components/CreateGreph";
 import Snacke from "./components/Snacke";
 import APITEST from "./components/EDU.tsx"; 
 import Form from "./components/Form.jsx";
+import CoffeeAPIs from "./components/CoffeAPI.jsx";
 function App(){
     return(
         <div>
@@ -45,6 +46,7 @@ function App(){
             </div>
             <CreateGraph/>
             <Snacke/>
+            <CoffeeAPIs/>
             <APITEST/>
             <Profile/>
             <Footer/>

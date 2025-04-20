@@ -1099,3 +1099,128 @@ background: white;
   bottom:0px;
 
 }
+
+/*CoffeeAPIs*/
+.CoffeeAPIs_container{
+  display: flex;
+  margin: 100px auto;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+.CoffeeAPIs_page1{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 500px;
+  height: 40px;
+  background: #000;
+  border-radius: 5px;
+  position: relative;
+}
+.CoffeeAPIs_select{
+  display: flex;
+  width: 75px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  cursor: pointer;
+}
+.CoffeeAPIs_input{
+  display: flex;
+}
+.CoffeeAPIs_button{
+  color:white;
+  display: flex;
+  cursor: pointer;
+}
+.SelectedCofffee_UL{
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  align-items: center;
+  padding: 5px;
+  text-align: center;
+  background: #000;
+  gap: 10px;
+  font-size: 18px;
+}
+.SelectedCofffee{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100px;
+  height: auto;
+  color:white;
+  position: absolute;
+  left: 0px;
+  top:40px;
+  cursor: pointer;
+  display: none;
+
+}
+.CoffeeAPIs_page2{
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  width: 80%;
+  height: auto;
+  gap: 40px;
+  padding: 5px;
+  display: none;
+}
+.ShowCoffee_Back{
+  display: flex;
+  color:white;
+  cursor: pointer;
+
+}
+.ShowCoffee_Coffee{
+  display: grid;
+  grid-template-columns:repeat(4,1fr);
+  gap: 10px;
+}
+.CoffeeAPIs_page3{
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  width: 80%;
+  height: auto;
+  gap: 40px;
+  padding: 5px;
+  display: none;
+}
+.ShowCoffee_Coffee_post{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+}
+.ShowCoffee_Coffee_title{
+  display: flex;
+  color: white;
+  font-size: 15px;
+}
+.ShowCoffee_Coffee_img{
+  display: flex;
+  width: 100%;
+  height: 200px;
+
+}
+.ShowCoffee_Coffee_price{
+  display: flex;
+  color:white;
+}
+.SelectedCofffee_Price_input{
+  display: flex;
+  position: absolute;
+  bottom:0px;
+  background: #000;
+  width: 100px;
+  right: -120px;
+  color:white;
+}
