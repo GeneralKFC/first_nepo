@@ -14,6 +14,10 @@ function CoffeeAPIs(){
     const [CoffeeValue,setCoffeeValue]=useState('');
     const [PostCoffee,setPostCoffee]=useState([]);
     const [Error,setError]=useState();
+    const [MuteMass,setMuteMass]=useState([]);
+    const [showAll,setshowAll]=useState(false);
+    const [showFullFilter,setshowFullFilter]=useState(false);
+    const [NoObj,setNoObj]=useState();
     const CoffeeFilter=()=>{
         if(DoSelect===false){
             setDoSelect(true);
@@ -22,13 +26,46 @@ function CoffeeAPIs(){
         }
         
     }
-    const Search=async()=>{
-        if(CoffeeValue!==''){
+    const Search=()=>{
+        if(CoffeeValue===''){
+            setshowAll(true);
+            setshowFullFilter(false);
+            Page1.current.style.display="none";
+            Page2.current.style.display="flex";
+        }else if(CoffeeValue!==''){
+            setshowAll(false);
+            setshowFullFilter(true);
             Page1.current.style.display="none";
             Page2.current.style.display="flex";
         }
-        
     }
+    useEffect(()=>{
+        if(showFullFilter){
+            const www=PostCoffee.filter(el => el.title === CoffeeValue);
+            if(www.length===0){
+                const searchPost=[];
+                console.log(searchPost);
+                for(let i=0;i<PostCoffee.length;i++){
+                    const name=PostCoffee[i].title;
+                       if(name.includes(CoffeeValue || CoffeeValue.toUpperCase())){
+                        searchPost.push(PostCoffee[i]);
+                       }
+                }
+                if(searchPost.length===0){
+                    console.log('wkwr')
+                    setNoObj(<p>Not found</p>);
+                }else{
+                    console.log('wkwr')
+                    setMuteMass(searchPost);
+                }
+                
+            }else{
+                setMuteMass(www);
+                console.log(www);
+            }
+            
+        }
+    },[showFullFilter,CoffeeValue,PostCoffee,])
     const ShowInputPrice=()=>{
         if(!PriseInp){
             setPriseInp(true);
@@ -49,7 +86,8 @@ function CoffeeAPIs(){
             getPrice.current.style.display="none";
         }
         
-    },[DoSelect,PriseInp])
+    },[DoSelect,PriseInp]);
+
     useEffect(()=>{
         const handleEnter=(e)=>{
             switch(e.key.toUpperCase()){
@@ -63,13 +101,17 @@ function CoffeeAPIs(){
     const ShowPage1=()=>{
         Page1.current.style.display="flex";
         Page2.current.style.display="none";
+        setshowAll(false);
+            setshowFullFilter(false);
     }
     useEffect(()=>{
         const fetchPost=async()=>{
             try{
-                const responce= await fetch(`${BASE_URL_Ice_Coffee}`);
-                const posts=await responce.json();
-                setPostCoffee(posts);
+                const responceIce= await fetch(`${BASE_URL_Ice_Coffee}`);
+                const postsCold=await responceIce.json();
+                const responceHot=await fetch(`${BASE_URL_HOt_Coffee}`);
+                const postsHot=await responceHot.json();
+                setPostCoffee([...postsCold,...postsHot]);
             }catch(error){
                 setError(error);
             }
@@ -83,17 +125,12 @@ function CoffeeAPIs(){
         Page2.current.style.display="flex";
         Page3.current.style.display="none";
     }
-
-
-
-    console.log(PostCoffee);
-
     return(
     <div className="CoffeeAPIs_container">
 
         <div ref={Page1} className="CoffeeAPIs_page1">
             <div ref={Select} className="SelectedCofffee">
-                <input className="SelectedCofffee_Price_input" ref={getPrice} onChange={(w)=>setPriseInp(w.target.value)} placeholder="price (0-5.5)"></input>
+                <input className="SelectedCofffee_Price_input" ref={getPrice} onChange={(w)=>setPriseInp(w.target.value)} placeholder="price (0-6)"></input>
                 <ul ref={Select_ul} className="SelectedCofffee_UL">
                     <li >With Karamellsirap</li>
                     <li >With Espresso</li>
@@ -102,21 +139,29 @@ function CoffeeAPIs(){
                 </ul>
             </div>
             <div ref={CoffeeSelect} onClick={()=>CoffeeFilter()} className="CoffeeAPIs_select">Param ↓</div>
-            <input value={CoffeeValue} onChange={(w)=>setCoffeeValue(w.target.value)} placeholder="Search your coffee" className="CoffeeAPIs_input"></input>
+            <input type="text" value={CoffeeValue} onChange={(w)=>setCoffeeValue(w.target.value)} placeholder="Search your coffee" className="CoffeeAPIs_input"></input>
             <div onClick={()=>Search()} className="CoffeeAPIs_button">Search</div>
         </div>
 
         <div ref={Page2} className="CoffeeAPIs_page2">
             <div className="ShowCoffee_Back" onClick={()=>ShowPage1()}>← Back</div>
             <div className="ShowCoffee_Coffee">
-                
-                    {PostCoffee.map((post)=>{
-                        return <li className="ShowCoffee_Coffee_post" key={post.id}>
+                    {NoObj}
+                    {showAll && (PostCoffee.map((post)=>{
+                        return <li className="ShowCoffee_Coffee_post" key={post.title}>
                                     <h1 className="ShowCoffee_Coffee_title">{post.title}</h1>
                                     <img className="ShowCoffee_Coffee_img" alt="Coffee photo" src={post.image}></img>
                                     <p className="ShowCoffee_Coffee_price">{post.price}</p>
                                 </li>
-                    })}
+                    }))}
+
+                    {showFullFilter && (MuteMass.map((post)=>{
+                        return  <li className="ShowCoffee_Coffee_post" key={post.title}>
+                                    <h1 className="ShowCoffee_Coffee_title">{post.title}</h1>
+                                    <img className="ShowCoffee_Coffee_img" alt="Coffee photo" src={post.image}></img>
+                                    <p className="ShowCoffee_Coffee_price">{post.price}</p>
+                                </li>
+                    }))}
                 
             </div>
         </div>
