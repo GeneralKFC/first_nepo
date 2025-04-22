@@ -1224,3 +1224,43 @@ background: white;
   right: -120px;
   color:white;
 }
+.CoffeeAPIs_details{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.CoffeeAPIs_head{
+  display: flex;
+  color:white;
+  font-size: 24px;
+}
+.CoffeeAPIsp3_image{
+  width: 300px;
+  height: 300px;
+
+}
+.CoffeeAPIs_Price{
+  display: flex;
+  color:white;
+  font-size: 20px;
+}
+.CoffeeAPIs_description{
+  display: flex;
+  color:white;
+  font-size: 18px;
+}
+.ShowCoffee_Coffee_NoObj{
+  display: flex;
+  color:white;
+  margin: auto;
+}
+.ShowCoffee_Coffee_isLoading{
+  display: flex;
+  color:white;
+  margin: auto;
+}
