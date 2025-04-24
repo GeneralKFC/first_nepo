@@ -23,6 +23,7 @@ import Snacke from "./components/Snacke";
 import APITEST from "./components/EDU.tsx"; 
 import Form from "./components/Form.jsx";
 import CoffeeAPIs from "./components/CoffeAPI.jsx";
+import Vid from "./components/Vid.jsx";
 function App(){
     return(
         <div>
@@ -47,6 +48,7 @@ function App(){
             <CreateGraph/>
             <Snacke/>
             <CoffeeAPIs/>
+            <Vid/>
             <APITEST/>
             <Profile/>
             <Footer/>
